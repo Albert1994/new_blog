@@ -1,7 +1,7 @@
 class PersonsController < ApplicationController
   def profile
-  	@posts  = Post.all
-  	  end
- 
-  
+  	if user_signed_in? 
+  	@posts  = current_user.posts
+  end
+  end
 end
