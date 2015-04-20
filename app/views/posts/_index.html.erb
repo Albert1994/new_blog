@@ -5,9 +5,9 @@
         <td class='text'><%= post.text %></td>
         </tr>
         <tr> 
-        <td class ='fanc' ><%= link_to 'Show', post %>
-        <%= link_to 'Edit', edit_post_path(post) %>
-        <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class ='fanc' ><%= link_to 'Просмотреть', post %>
+        <%= link_to 'Редактировать', edit_post_path(post) %>
+        <%= link_to 'Удалить', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
     <% end %>
   </tbody>
