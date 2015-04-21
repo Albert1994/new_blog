@@ -1,10 +1,9 @@
-<p id="notice"><%= notice %></p>
-<p>
-  <strong>Запись:</strong><br/>
- <h3> <%= @post.text %>
- </h3><br/>
-</p>
-<h4>Комменты</h4>
+<div align="center">
+		
+ 		<h1> <%= @post.text %></h1><br/>
+ </div>
+
+<h1  align="center">Комменты</h1>
 <%= render @post.comments %>
  
 <h2>Добавить комментарий</h2>
@@ -12,5 +11,5 @@
 
 
 
-<%= link_to 'Редактировать', edit_post_path(@post) %> |
-<%= link_to 'Назад', user_posts_path(current_user) %>
+<%= link_to 'Редактировать', edit_post_path(@post), class: "button28" %> |
+<%= link_to 'Назад', user_posts_path(current_user),  class: "button28" %>

@@ -1,13 +1,13 @@
-<table border = '10px' width="100%">
+<table align="center">
   <tbody>
     <%  @posts.each do |post| %>
       <tr>
-        <td class='text'><%= post.text %></td>
+        <td class='text'><h4><%= post.text %></h4></td>
         </tr>
         <tr> 
-        <td class ='fanc' ><%= link_to 'Просмотреть', post %>
-        <%= link_to 'Редактировать', edit_post_path(post) %>
-        <%= link_to 'Удалить', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class ='fanc' ><%= link_to 'Просмотреть', post,class: "button28" %>
+        <%= link_to 'Редактировать', edit_post_path(post),class: "button28" %>
+        <%= link_to 'Удалить', post, method: :delete, data: { confirm: 'Are you sure?' } ,class: "button28" %></td>
         </tr>
     <% end %>
   </tbody>
