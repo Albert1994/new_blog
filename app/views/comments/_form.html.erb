@@ -1,12 +1,12 @@
 <%= form_for([@post, @post.comments.build]) do |f| %>
   <div >
-    <%= f.text_field :commenter,  :value => current_user.email %>
+    <%= f.text_field :commenter,  :value => @user.login %>
   </div>
   <div>
     <%= f.label :body %><br>
     <%= f.text_area :body, size: "80x6"%>
   </div>
   <div class="padd">
-  <%= f.submit("отправить")%>
+  <%= f.submit "отправить", class: "btn btn-success btn-ms"%>
    </div>
 <% end %>
