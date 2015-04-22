@@ -21,6 +21,7 @@ class PostsController < ApplicationController
 
   # GET /posts/1/edit
   def edit
+    @user= current_user
   end
 
   # POST /posts
