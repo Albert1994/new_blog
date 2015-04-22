@@ -22,6 +22,10 @@
                 <li ><%= link_to 'Главная', persons_profile_path %> </li>
                 <li><%= link_to 'Новый пост',new_user_post_path(current_user)%></li>
                 <li><%= link_to "Выйти", destroy_user_session_path, :method => :delete  %></li>
+                <%= form_tag results_path, method: :get, role: 'search' do %>
+  <%= text_field_tag :query, params[:query] %>
+  <%= submit_tag "Искать", name: nil %>
+<% end %>
             <% else %>
               <li><%= link_to 'Войти', new_user_session_path %> </li>
               <li><%= link_to 'Зарегистрироваться',new_user_registration_path %></li>
