@@ -1,42 +1,51 @@
-<h2>Настройки аккаунта, <%= @user.login%></h2>
-
-<form class=  "form-horizontal" >
-
+<h4> Настройка аккаунта, <%= @user.login%> </h4>
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
- 
-
-  <div class="form-group form-group-sm  " ><%= f.label :Имя %><br />
-  <%= f.email_field :name,class: "form-control" %></div>
-
-<div class="form-group form-group-sm "><%= f.label :Фамилия %><br />
-  <%= f.email_field :lastname,class: "form-control" %></div>
-  <div class="form-group form-group-sm"><%= f.label :Возраст %><br />
-  <%= f.text_field :age,class: "form-control"%></div>
-  <div class ="col-xs-3"><%= f.label :Хобби %><br />
-  <%= f.text_area :hobbi, size: "20x5",class: "form-control" %></div>
-
-  <div class ="col-xs-3"><%= f.label :email %><br />
-  <%= f.email_field :email,class: "form-control"%></div>
-
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
-
-  <div class ="col-xs-3"><%= f.label :"Пароль" %> <i>(Введите старый пароль)</i><br />
-    <%= f.password_field :password, autocomplete: "off",class: "form-control"%></div>
-
-  <div class ="col-xs-3"><%= f.label :"Повторите пароль" %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off",class: "form-control"%></div>
-
-  <div class ="col-xs-3"><%= f.label :"Новый пароль" %> <i></i><br />
-    <%= f.password_field :current_password, autocomplete: "off" ,class: "form-control"%></div><br/>
-</form>
-  <div><%= f.submit "Редактировать", class: "btn btn-success btn-lg" %></div>
+<div class="form-group">
+ <div class="input-group">
+    <span class="input-group-addon"> <%= f.label :Логин %> </span> 
+     <%= f.text_field :login,autofocus: true,class: "form-control" %>
+  </div>
+  <div class="input-group">
+    <span class="input-group-addon"><%= f.label :Имя %> </span> 
+       <%= f.text_field :name, class: "form-control" %>
+  </div>
+  <div class="input-group">
+    <span class="input-group-addon"><%= f.label :Фамилия %> </span> 
+       <%= f.text_field :lastname , class: "form-control" %>
+  </div>
+  <div class="input-group">
+    <span class="input-group-addon"><%= f.label :Возраст %> </span> 
+       <%= f.text_field :age , class: "form-control" %>
+  </div>
+   <div class="input-group">
+    <span class="input-group-addon"><%= f.label :Хобби %> </span> 
+     <%= f.text_area :hobbi, class: "form-control" %>
+  </div>
+  <div class="input-group">
+    <span class="input-group-addon"><%= f.label :email %></span> 
+     <%= f.email_field :email , class: "form-control" %>
+  </div>
+  <div class="input-group">
+    <span class="input-group-addon"><%= f.label :Пароль %></span> 
+   <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
+  </div>
+  <div class="input-group">
+    <span class="input-group-addon"><%= f.label :Повторите_пароль %></span> 
+ <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
+  </div>
+  <div class="input-group">
+    <span class="input-group-addon"><%= f.label :Новый_пароль %></span> 
+  <%= f.password_field :current_password, autocomplete: "off" , class: "form-control" %>
+   </div>
+   <p></p><%= f.submit "Редактировать", class: "btn btn-default btn-sm" %>
 <% end %>
 
+</div>
+
+  
 <h3>Удалить аккаунт?</h3>
 
-<p> <%= button_to "Удалить аккаунт", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-success btn-lg" %></p>
+<p> <%= button_to "Удалить аккаунт", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-default btn-sm" %></p>
 
-<%= link_to "Назад", :back , class: "button28" %>
+<%= link_to "Назад", :back , class: "btn btn-default btn-sm" %>

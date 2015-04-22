@@ -14,12 +14,3 @@
  *= require_self
  */
 
-
-div.a {
-    left: 0; bottom: 0; /* Левый нижний угол */
-    padding: 10px; /* Поля вокруг текста */
-    background: #fff; /* Цвет фона */
-    color: #000; /* Цвет текста */
-    width: 100%;
-    margin-top: 100px;
-}

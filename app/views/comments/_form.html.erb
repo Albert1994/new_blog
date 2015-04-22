@@ -2,11 +2,13 @@
   <div >
     <%= f.text_field :commenter,  :value => @user.login %>
   </div>
-  <div>
-    <%= f.label :body %><br>
-    <%= f.text_area :body, size: "80x6"%>
+ <div class="form-group">
+ <%= f.label :коммент, class: "control-label" %>
+  <div class="input-group">
+     <%= f.text_field :body, class: "form-control" %>
+    <span class="input-group-btn">
+    <%= f.submit "отправить", class: "btn btn-default " %>
+    </span>
   </div>
-  <div class="padd">
-  <%= f.submit "отправить", class: "btn btn-success btn-ms"%>
-   </div>
+</div>
 <% end %>

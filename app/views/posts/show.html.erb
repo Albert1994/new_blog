@@ -1,15 +1,19 @@
-<div align="center">
-		
- 		<h1> <%= @post.text %></h1><br/>
- </div>
+<div class="panel panel-success" align="center">
+		<div class="panel-heading">
+		<h1> <%= @post.text %></h1><br/>
+ 	</div>
+ 	<div class="panel-footer">
+ 		<%= link_to 'Редактировать', edit_post_path(@post), class: "btn btn-default btn-sm"  %> 
+<%= link_to 'Назад', user_posts_path(current_user), class: "btn btn-default btn-sm" %>
 
+ 	</div>
+ </div>
+<div class="panel panel-success">
 <h1  align="center">Комменты</h1>
+</div>
 <%= render @post.comments %>
  
+
+
 <h2>Добавить комментарий</h2>
 <%= render "comments/form"%>
-
-
-
-<%= link_to 'Редактировать', edit_post_path(@post), class: "btn btn-success btn-ms" %> |
-<%= link_to 'Назад', user_posts_path(current_user), class: "btn btn-success btn-ms"%>
