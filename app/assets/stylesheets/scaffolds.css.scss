@@ -4476,7 +4476,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   color: #cccccc;
 }
 .navbar-inverse {
-  background-color: #93c54b;
+  background-color: #718BA8;
   border-color: #000;
 }
 .navbar-inverse .navbar-brand {
@@ -4491,12 +4491,14 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   color: #dfd7ca;
 }
 .navbar-inverse .navbar-nav > li > a {
-  color: #6b9430;
+  color: #fff;
 }
 .navbar-inverse .navbar-nav > li > a:hover,
 .navbar-inverse .navbar-nav > li > a:focus {
-  color: #ffffff;
-  background-color: transparent;
+  color: #000;
+ box-shadow: 0 3px 9px rgba(0, 0, 0, 0.1);
+-webkit-background-clip: padding-box;
+background-clip: padding-box;background-color: transparent;
 }
 .navbar-inverse .navbar-nav > .active > a,
 .navbar-inverse .navbar-nav > .active > a:hover,
@@ -5562,7 +5564,7 @@ a.list-group-item-danger.active:focus {
 }
 .panel-success > .panel-heading {
   color: #93c54b;
-  background-color: #93c54b;
+  background-color: #718BA8;
   border-color: #000;
 }
 .panel-success > .panel-heading + .panel-collapse > .panel-body {
@@ -6571,7 +6573,7 @@ button.close {
   text-transform: uppercase;
 }
 .navbar .nav > li > a {
-  font-size: 11px;
+ 
   line-height: 22px;
   font-weight: 500;
   text-transform: uppercase;
@@ -6608,9 +6610,10 @@ input:focus,
   box-shadow: none;
 }
 .nav {
-  font-size: 11px;
+  font-size: 100%;
   line-height: 22px;
-  font-weight: 500;
+  font-weight: 500; 
+  color: #fff;
   text-transform: uppercase;
 }
 .nav .open > a,
