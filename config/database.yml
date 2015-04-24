@@ -3,14 +3,14 @@
 defaults_development: &defaults_development
   adapter: postgresql
   encoding: unicode
-  username: app_name
+  username: albert1
   password: 1234
   host: localhost
 
 development:
-  database: l
+  database: datab_1
   <<: *defaults_development
 
 test:
-  database: m
+  database: datab_2
   <<: *defaults_development
